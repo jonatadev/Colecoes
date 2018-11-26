@@ -82,14 +82,14 @@ public class Album {
             database.get(0).setColecao(maringa);
             database.get(0).setColecao(londrina);
             
-            int figNovas[] = {10,20,30,40,50}; 
+            int figNovas[] = {10,20,30,70,50};
+            int figExclusivas[] = {10,20,30,40,50};
             int figRep[] = {};
             
+            comparaVetor(figNovas, figExclusivas);
+            //int[] c = comparaVetor(figNovas, figExclusivas);
+            //exibirVetor(c); // 70
             
-            londrina.setFigurinhasUnicas(figNovas);
-            
-            
-            exibirVetor(londrina.getFigurinhasUnicas());
             
       } 
       
@@ -99,6 +99,20 @@ public class Album {
                   System.out.print(" " + vetor[i]);
             }
             System.out.println("");
+      }
+      
+      public static /*int[]*/ void comparaVetor(int[]a, int[] b) {
+            int[] c = {};
+            for(int i = 0; i < a.length; i++) {
+                for(int j = 0; j < b.length; j++) {
+                      if(a[i] != b[j]) {
+                            int k = 0;
+                            c[k] = a[i];
+                            System.out.println(c[k]);
+                      }
+                }  
+            }
+            //return c;
       }
       
 }
